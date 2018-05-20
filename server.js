@@ -58,15 +58,16 @@ var initDb = function(callback) {
   });
 };
 
+console.log('Hello');
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
-  request("http://nbt.tj").then((body)=>{
+  /*request("http://nbt.tj").then((body)=>{
     res.send(body);
   })
- /* if (!db) {
+  if (!db) {
     initDb(function(err){});
-  }
+  }*/
   if (db) {
     var col = db.collection('counts');
     // Create a document with request IP and current time of request
@@ -79,7 +80,7 @@ app.get('/', function (req, res) {
     });
   } else {
     res.render('index.html', { pageCountMessage : null});
-  }*/
+  }
 });
 
 app.get('/pagecount', function (req, res) {
