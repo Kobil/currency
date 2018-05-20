@@ -3,7 +3,7 @@ var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
 
-var request = require("request-promise");
+//var request = require("request-promise");
     
 Object.assign=require('object-assign')
 
