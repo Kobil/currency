@@ -62,7 +62,7 @@ app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   request("http://nbt.tj").then((body)=>{
-    res.send(body);
+    res.send("Hello World");
   })
  /* if (!db) {
     initDb(function(err){});
