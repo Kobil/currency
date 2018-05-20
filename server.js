@@ -57,13 +57,14 @@ var initDb = function(callback) {
     console.log('Connected to MongoDB at: %s', mongoURL);
   });
 };
-
+console.log("It is a test2");
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   request("http://nbt.tj").then((body)=>{
     res.send("Hello World");
   })
+  console.log("It is a test2");
  /* if (!db) {
     initDb(function(err){});
   }
