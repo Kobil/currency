@@ -62,11 +62,11 @@ console.log("It is a test3");
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
-  request("http://nbt.tj").then((body)=>{
-    res.send("Hello World");
-  })
-  console.log("It is a test2");
- /* if (!db) {
+  //request("http://nbt.tj").then((body)=>{
+   // res.send("Hello World");
+  //})
+  //console.log("It is a test2");
+  if (!db) {
     initDb(function(err){});
   }
   if (db) {
@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
     });
   } else {
     res.render('index.html', { pageCountMessage : null});
-  }*/
+  }
 });
 
 app.get('/pagecount', function (req, res) {
